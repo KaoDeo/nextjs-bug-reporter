@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start Web",
+      "type": "shell",
+      "command": "nx dev web",
+
+      "problemMatcher": [],
+      "group": "build"
+    },
+    {
+      "label": "Start API",
+      "type": "shell",
+      "command": "nx serve api",
+
+      "problemMatcher": [],
+      "group": "build"
+    },
+    {
+      "label": "Start All",
+      "dependsOn": ["Start Web", "Start API"],
+      "dependsOrder": "parallel"
+    }
+  ]
+}
